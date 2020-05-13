@@ -1,3 +1,4 @@
+import models.GenericClass;
 import models.Person;
 
 public class Main {
@@ -61,7 +62,17 @@ public class Main {
         Person stephen = new Person("Stephen", "Koch");
         // stephen.setName("Stephen", "Koch");
         System.out.println(stephen.getName());
-        
+
+
+        // generics for class instances
+        GenericClass<String, Integer> example = new GenericClass<>("Stephen", 99);
+        System.out.println(example.getD1());
+        System.out.println(example.getD2());
+
+        GenericClass<Long, Character> example2 = new GenericClass<>((long)404, (char)'c');
+        System.out.println(example2.getD1());
+        System.out.println(example2.getD2());
+
 
     }
 }
